@@ -1,26 +1,19 @@
-import { useRouter } from 'next/router';
 import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
 import SidebarLayout from '../components/layouts/sidebar/SidebarLayout';
 // import Search from '../components/utility/search/Search';
-import CatCard from '../components/cards/cat/CatCard';
-import { mockCatCardProps } from '../components/cards/cat/CatCard.mocks';
-import styles from '../styles/Home.module.css';
 import { NextPageWithLayout } from './page';
 
-const Home: NextPageWithLayout = () => {
-  const { locale } = useRouter();
-
+const About: NextPageWithLayout = () => {
   return (
     <section className="flex flex-col items-center gap-y-5 mt-12 sm:mt-36">
-      <h1 className={styles.title}>Test</h1>
-      <CatCard {...mockCatCardProps.base} />
+      <h1>About Page</h1>
     </section>
   );
 };
 
-export default Home;
+export default About;
 
-Home.getLayout = (page) => {
+About.getLayout = (page) => {
   return (
     <PrimaryLayout>
       <SidebarLayout />
