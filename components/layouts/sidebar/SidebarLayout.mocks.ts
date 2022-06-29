@@ -4,6 +4,6 @@ const base: ISidebarLayout = {
   children: '{{component}}',
 };
 
-export const mockPrimaryLayoutProps = {
+export const mockSidebarLayoutProps = {
   base,
 };
